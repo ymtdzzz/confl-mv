@@ -20,7 +20,7 @@ export CONFLUENCE_USERNAME="your_name@example.com"
 export CONFLUENCE_APIKEY="your api key..."
 ```
 
-First, attempt to navigate to the target page.
+First, attempt to move the target page.
 
 ```sh
 confl-mv movethis <target_page_id> <destination_page_id> -d ${CONFLUENCE_DOMAIN} -u ${CONFLUENCE_USERNAME} -a ${CONFLUENCE_APIKEY}
