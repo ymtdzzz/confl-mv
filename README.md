@@ -6,6 +6,14 @@ It is motivated by the fact that Confluence has a limit of up to 100 page moveme
 
 ## How to use
 
+Install
+
+```
+go install github.com/ymtdzzz/confl-mv
+```
+
+Set environment variables
+
 ```
 export CONFLUENCE_DOMAIN="your-domain.atlassian.net"
 export CONFLUENCE_USERNAME="your_name@example.com"
