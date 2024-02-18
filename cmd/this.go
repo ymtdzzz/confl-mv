@@ -12,8 +12,8 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-var movethisCmd = &cobra.Command{
-	Use:   "movethis <target_page_id> <destination_page_id>",
+var thisCmd = &cobra.Command{
+	Use:   "this <target_page_id> <destination_page_id>",
 	Short: "",
 	Long:  "",
 	RunE: func(cmd *cobra.Command, args []string) error {
@@ -62,7 +62,7 @@ var movethisCmd = &cobra.Command{
 		}
 		fmt.Printf(`Failed to move page [%s] to [%s]
 because it has over 99 child pages.
-Use movechild command to move this page`, target.ID, destination.ID)
+Use child command to move this page`, target.ID, destination.ID)
 
 		return nil
 	},
@@ -70,5 +70,5 @@ Use movechild command to move this page`, target.ID, destination.ID)
 }
 
 func init() {
-	rootCmd.AddCommand(movethisCmd)
+	rootCmd.AddCommand(thisCmd)
 }

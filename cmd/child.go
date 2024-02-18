@@ -12,8 +12,8 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-var movechildCmd = &cobra.Command{
-	Use:   "movechild <target_page_id> <destination_page_id>",
+var childCmd = &cobra.Command{
+	Use:   "child <target_page_id> <destination_page_id>",
 	Short: "",
 	Long:  "",
 	RunE: func(cmd *cobra.Command, args []string) error {
@@ -86,5 +86,5 @@ Move it's child pages first`, child.ID, destination.ID)
 }
 
 func init() {
-	rootCmd.AddCommand(movechildCmd)
+	rootCmd.AddCommand(childCmd)
 }
